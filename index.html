@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noah and Caitlin</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/img/icon.png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="js/script.js"></script>
+    <script src="js/cal.js" async defer></script>
 </head>
 <body>
-    <h1>Save the Date!</h1>
+    <nav>
+        <div class="nav-content">
+            <img class="initials" src="img/initials.png">
+            <div class="links">
+                <a href="#about">About</a>
+                <a href="#details">Details</a>
+                <a href="#RSVP">RSVP</a>
+            </div>
+        </div>
+    </nav>
+    <div class="welcome-img">
+        <div class="content w3-animate-opacity">
+            <h2>Noah & Caitlin</h2>
+            <p>September 26th, 2025</p>
+            <add-to-calendar-button
+            name="Noah and Caitlin's Wedding"
+            startDate="2025-09-26"
+            options="['Apple','Google','iCal','Microsoft365','Outlook.com']"
+            timeZone="America/Los_Angeles"
+            size="4"
+            />
+        </div>
+    </div>
+    <div class="about-content" id="about">
+        <h3 id="countdown"></h3>
+    </div>
+    <div class="details" id="details">
+        <h3>Hello</h3>
+    </div>
 </body>
 </html>
