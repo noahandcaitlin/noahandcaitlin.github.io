@@ -4,41 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noah and Caitlin</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="/img/icon.png">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/cal.js" async defer></script>
+    <script src="https://kit.fontawesome.com/f7c8be4779.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-content">
-            <img class="initials" src="img/initials.png">
-            <div class="links">
-                <a href="#about">About</a>
-                <a href="#details">Details</a>
-                <a href="#RSVP">RSVP</a>
+    <div id="under-construction">
+        <div class="under-construction-img">
+            <div class="under-construction-content w3-animate-opacity">
+                <img src="img/initials.png">
+                <h2>Tying the Knot...</h2>
+                <p>We're still working on some finishing touches. Check back at a later date for updates.</p>
+                <div class="admin-access">
+                    <input type="password" placeholder="Admin Access" id="password" name="password">
+                    <fa class="fas fa-arrow-right" id="login"></fa>
+                </div>
             </div>
         </div>
-    </nav>
-    <div class="welcome-img">
-        <div class="content w3-animate-opacity">
-            <h2>Noah & Caitlin</h2>
-            <p>September 26th, 2025</p>
-            <add-to-calendar-button
-            name="Noah and Caitlin's Wedding"
-            startDate="2025-09-26"
-            options="['Apple','Google','iCal','Microsoft365','Outlook.com']"
-            timeZone="America/Los_Angeles"
-            size="4"
-            />
+    </div>
+    <div id="main">
+        <div class="container">
+            <nav id="navbar">
+                <div class="nav-content">
+                    <img class="mobile-initials" src="img/initials.png">
+                    <div class="links">
+                        <a href="#about">Venue</a>
+                        <a href="#schedule">Schedule</a>
+                        <a href="#accommodations">Accommodations</a>
+                    </div>
+                    <img class="initials" src="img/initials.png">
+                    <a href="#rsvp"><button id="RSVP"><i class="fa-solid fa-clipboard-user"></i> &nbsp;RSVP</button></a>
+                </div>
+            </nav>
+            <div class="welcome-img">
+                <div class="welcome-content w3-animate-opacity">
+                    <h2>Noah & Caitlin</h2>
+                    <p>September 26th, 2025</p>
+                    <add-to-calendar-button
+                    name="Noah and Caitlin's Wedding"
+                    startDate="2025-09-26"
+                    options="['Apple','Google','iCal','Microsoft365','Outlook.com']"
+                    timeZone="America/Los_Angeles"
+                    size="4"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="venue section" id="about">
+            <h1>Venue</h1>
+            <img src="img/sep.png" class="sep">
+            <div class="venue-details">
+                <div class="general-info">
+                    <h2>Heritage Estate</h2>
+                    <h2>Winery and Cidery</h2>
+                    <p>421 Penetanguishene Rd</p>
+                    <p>Barrie, ON L4M 0H1</p>
+                    <div class="get-directions">
+                        <div class="directions" id="apple">
+                            <img src="https://static-00.iconduck.com/assets.00/apple-icon-831x1024-suvunx6x.png">
+                            <p>Get Directions</p>
+                        </div>
+                        <div class="directions" id="google">
+                            <img src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png">
+                            <p>Get Directions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="venue-img">
+                    <img src="https://www.tourismbarrie.com/images/default-source/partner-pictures/heritage-estates-aerial-view.jpg?sfvrsn=ad243e13_0">
+                </div>
+            </div>
+        </div>
+        <div class="details section" id="details">
+            <h1>Schedule</h1>
+            <img src="img/sep.png" class="sep">
+            <div class="schedule-details">
+            </div>
+        </div>
+        <div class="accommodations section" id="accommodations">
+            <h1>Accommodations</h1>
+            <img src="img/sep.png" class="sep">
+            <div class="accommodations-details">
+            </div>
+        </div>
+        <div class="rsvp section" id="rsvp">
+            <h1>RSVP</h1>
+            <img src="img/sep.png" class="sep">
+            <div class="rsvp-details">
+                <h3 id="countdown"></h3>
+                <p>Received an invitation? Please let us know if you'll be attending by filling out the form below.</p>
+                <form id="rsvp-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="guests">Number of Guests</label>
+                        <div class="number-of-guests-group">
+                            <i class="fas fa-minus"></i>
+                            <input type="number" id="guests" name="guests" required>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message</label>
+                        <input type="text" id="message" name="message">
+                        <label for="confirm" id="confirm-label">Will you be attending?</label>
+                        <div class="radio-group">
+                            <input type="radio" id="yes" name="confirm" value="yes" required>
+                            <label for="yes">Yes</label>
+                            <input type="radio" id="no" name="confirm" value="no" required>
+                            <label for="no">No</label>
+                        </div>
+
+
+            </div>
         </div>
     </div>
-    <div class="about-content" id="about">
-        <h3 id="countdown"></h3>
-    </div>
-    <div class="details" id="details">
-        <h3>Hello</h3>
-    </div>
 </body>
+<script src="js/script.js"></script>
 </html>
